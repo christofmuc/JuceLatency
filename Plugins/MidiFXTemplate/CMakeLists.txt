@@ -12,7 +12,7 @@ juce_add_plugin("${BaseTargetName}"
         NEEDS_MIDI_OUTPUT TRUE
         AU_MAIN_TYPE kAudioUnitType_MIDIProcessor
         EDITOR_WANTS_KEYBOARD_FOCUS FALSE
-        COPY_PLUGIN_AFTER_BUILD TRUE
+        COPY_PLUGIN_AFTER_BUILD FALSE
         PLUGIN_MANUFACTURER_CODE Juce
         PLUGIN_CODE MFxt
         FORMATS AU VST3 Standalone
