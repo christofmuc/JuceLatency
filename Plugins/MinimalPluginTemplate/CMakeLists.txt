@@ -1,6 +1,6 @@
-project(MinimalPluginTemplate VERSION 0.0.1)
+project(JuceDelay VERSION 0.0.1)
 
-set (BaseTargetName MinimalPluginTemplate)
+set (BaseTargetName JuceDelay)
 
 juce_add_plugin("${BaseTargetName}"
         # VERSION ...                               # Set this if the plugin version is different to the project version
@@ -8,7 +8,7 @@ juce_add_plugin("${BaseTargetName}"
         # ICON_SMALL ...
         COMPANY_NAME "MyCompany"
         IS_SYNTH FALSE
-        NEEDS_MIDI_INPUT TRUE
+        NEEDS_MIDI_INPUT FALSE
         NEEDS_MIDI_OUTPUT FALSE
         IS_MIDI_EFFECT FALSE
         EDITOR_WANTS_KEYBOARD_FOCUS FALSE
@@ -16,7 +16,7 @@ juce_add_plugin("${BaseTargetName}"
         PLUGIN_MANUFACTURER_CODE Juce
         PLUGIN_CODE MIpl
         FORMATS AU VST3 Standalone
-        PRODUCT_NAME "Minimal Plugin Template")
+        PRODUCT_NAME "JuceDelay based on JackDelay")
 
 target_sources(${BaseTargetName} PRIVATE
         Source/PluginProcessor.cpp)
