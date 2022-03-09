@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Build JuceLatency VST for Windows
+
+on: [push]
+
+jobs:
+  build-windows:
+      runs-on: windows-2019
+      steps:
+      - name: Checkout repository with tags
+        uses: actions/checkout@v2        
+        with:
+          fetch-depth: 0
+
+      - name: Additionally checkout submodules - don't use checkout action as it will overwrite refs
+        run: |
+          git submodule update --recursive --init --depth 1
+
+      - name: CMake configure
+        run: cmake -S . -B Builds -G "Visual Studio 16 2019" -A x64
+
+      - name: CMake build
+        run: cmake --build Builds --config RelWithDebInfo -- /M:4
+
+      - name: Publish release
+        uses: xresloader/upload-to-github-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          file: builds/Plugins/JuceDelayPlugin/JuceDelay_artefacts/Debug/VST3/JuceLatency.vst3/Contents/x86_64-win/JuceLatency.vst3
+          tags: true
