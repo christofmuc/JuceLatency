@@ -22,7 +22,10 @@
 #define __MTDM_H
 
 
+#ifdef WIN32
+#else
 #include <unistd.h>
+#endif
 
 
 class Freq
