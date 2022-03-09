@@ -1,6 +1,6 @@
 #add_subdirectory(NewPluginTemplate)
 #add_subdirectory(PluginWithCustomModule)
 #add_subdirectory(CustomStandaloneFilter)
-add_subdirectoryJuceDelayPlugin)
+add_subdirectory(JuceDelayPlugin)
 #add_subdirectory(MidiFXTemplate)
 #add_subdirectory(MaxParametersPlugin)
