@@ -28,5 +28,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          file: builds/Plugins/JuceDelayPlugin/JuceDelay_artefacts/Debug/VST3/JuceLatency.vst3/Contents/x86_64-win/JuceLatency.vst3
+          file: builds/Plugins/JuceDelayPlugin/JuceDelay_artefacts/RelWithDebInfo/VST3/JuceLatency.vst3/Contents/x86_64-win/JuceLatency.vst3
           tags: true
