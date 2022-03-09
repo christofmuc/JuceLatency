@@ -16,7 +16,7 @@ juce_add_plugin("${BaseTargetName}"
         PLUGIN_MANUFACTURER_CODE Juce
         PLUGIN_CODE MIpl
         FORMATS AU VST3 Standalone
-        PRODUCT_NAME "JuceDelay based on jack-delay")
+        PRODUCT_NAME "JuceLatency")
 
 target_sources(${BaseTargetName} PRIVATE
         Source/mtdm.cc Source/mtdm.h
