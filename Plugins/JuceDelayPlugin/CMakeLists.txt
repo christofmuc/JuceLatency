@@ -6,7 +6,7 @@ juce_add_plugin("${BaseTargetName}"
         # VERSION ...                               # Set this if the plugin version is different to the project version
         # ICON_BIG ...                              # ICON_* arguments specify a path to an image file to use as an icon for the Standalone
         # ICON_SMALL ...
-        COMPANY_NAME "MyCompany"
+        COMPANY_NAME "Christof Ruch Beratungs UG (haftungsbeschraenkt)"
         IS_SYNTH FALSE
         NEEDS_MIDI_INPUT FALSE
         NEEDS_MIDI_OUTPUT FALSE
@@ -16,10 +16,12 @@ juce_add_plugin("${BaseTargetName}"
         PLUGIN_MANUFACTURER_CODE Juce
         PLUGIN_CODE MIpl
         FORMATS AU VST3 Standalone
-        PRODUCT_NAME "JuceDelay based on JackDelay")
+        PRODUCT_NAME "JuceDelay based on jack-delay")
 
 target_sources(${BaseTargetName} PRIVATE
-        Source/PluginProcessor.cpp)
+        Source/mtdm.cc Source/mtdm.h
+        Source/PluginProcessor.cpp
+        Source/PluginProcessor.h)
 
 target_compile_definitions(${BaseTargetName}
         PUBLIC
