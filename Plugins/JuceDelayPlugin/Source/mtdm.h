@@ -48,7 +48,7 @@ class MTDM
 public:
 
     MTDM (int fsamp);
-    int process (size_t len, float *inp, float *out);
+    int process (size_t len, const float *inp, float *out);
     int resolve (void);
     void invert (void) { _inv ^= 1; }
     int    inv (void) { return _inv; }

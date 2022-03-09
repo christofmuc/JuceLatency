@@ -54,7 +54,7 @@ MTDM::MTDM (int fsamp) : _cnt (0), _inv (0)
 }
 
 
-int MTDM::process (size_t len, float *ip, float *op)
+int MTDM::process (size_t len, const float *ip, float *op)
 {
     int    i;
     float  vip, vop, a, c, s;
